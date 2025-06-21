@@ -46,7 +46,7 @@ Inspired by the classic *Dining Philosophers Problem*, this project simulates ph
 Each philosopher follows this cycle:
 
 ```
-Think 🤔 → Take forks 🍴 → Eat 🍝 → Sleep 😴 → Repeat
+ Take forks 🍴 → Eat 🍝 → Sleep 😴 → Think 🤔 → Repeat
 ```
 
 They must take **two forks** to eat — but each fork is a **shared resource**:
