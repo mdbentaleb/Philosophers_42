@@ -6,7 +6,7 @@
 /*   By: moben-ta <moben-ta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/04 18:14:23 by moben-ta          #+#    #+#             */
-/*   Updated: 2025/06/20 17:45:06 by moben-ta         ###   ########.fr       */
+/*   Updated: 2025/06/24 11:11:45 by moben-ta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	ft_eating(t_philo *philo)
 	pthread_mutex_lock(philo->l_fork);
 	if (!ft_get_simulation_running(philo->data))
 		return ((void)pthread_mutex_unlock(philo->l_fork));
-	ft_print_action(philo, "has_taken a fork");
+	ft_print_action(philo, "has taken a fork");
 	if (philo->data->philo_count == 1)
 	{
 		pthread_mutex_unlock(philo->l_fork);
@@ -45,7 +45,7 @@ void	ft_eating(t_philo *philo)
 		pthread_mutex_unlock(philo->r_fork);
 		return ((void)pthread_mutex_unlock(philo->l_fork));
 	}
-	ft_print_action(philo, "has_taken a fork");
+	ft_print_action(philo, "has taken a fork");
 	ft_print_action(philo, "is eating");
 	ft_update_last_meal(philo);
 	ft_sleep(philo, philo->data->time2eat);
