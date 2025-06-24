@@ -6,7 +6,7 @@
 /*   By: moben-ta <moben-ta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/13 18:30:00 by moben-ta          #+#    #+#             */
-/*   Updated: 2025/06/23 12:28:37 by moben-ta         ###   ########.fr       */
+/*   Updated: 2025/06/24 11:11:21 by moben-ta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int	ft_check_meals_complete(t_philo *philo)
 	t_data	*data;
 
 	data = philo->data;
-	if (data->must_eat > 0 && philo->eaten_count >= data->must_eat)
+	if (data->must_eat > 0 && philo->eaten_count > data->must_eat)
 	{
 		sem_wait(data->meal_check);
 		exit(0);
